@@ -117,6 +117,9 @@ canvas {
 .small-screen {
   margin-left: 50px;
 }
+.bigsmall-screen {
+  margin-left: 20px;
+}
 
 @media screen and (max-width: 1024px) {
   .crudrevue {
@@ -158,6 +161,7 @@ canvas {
   .crudrevue {
     > div:nth-of-type(1) {
       width: 300px;
+ 
       > form {
         > div {
           width: 300px;
