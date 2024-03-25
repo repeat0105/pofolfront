@@ -1,0 +1,95 @@
+.aboutc {
+  padding-top: 180px;
+  margin: 0 auto;
+  width: 75%;
+  height: 100vh;
+  color: #fff;
+  h1 {
+    padding-bottom: 30px;
+    font-weight: 300;
+    font-size: 48px;
+  }
+  > p {
+    padding-bottom: 50px;
+    font-size: 20px;
+    opacity: 0.7;
+    line-height: 30px;
+  }
+  $aboutnum: (1, 2);
+  @each $anum in $aboutnum {
+    & > div:nth-of-type(#{$anum}) {
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 30px;
+      position: relative;
+      left: -40px;
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(105, 105, 105, 0.3);
+        border-radius: 20px;
+        width: 160px;
+        height: 160px;
+
+        > p {
+          font-size: 12px;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+  > img:nth-of-type(1) {
+    position: absolute;
+    top: 1255px;
+    left: 52%;
+    width: 36%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutc {
+    > img:nth-of-type(1) {
+      display: none;
+    }
+    > div:nth-of-type(1),
+    > div:nth-of-type(2) {
+      width: 100%;
+      left: -17px;
+    }
+  }
+}
+
+@media screen and (max-width: 486px) {
+  .aboutc {
+    > div:nth-of-type(1),
+    > div:nth-of-type(2) {
+      > div {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    > div:nth-of-type(2) {
+      > div {
+        position: relative;
+        top: 0;
+        left: 0;
+        > p {
+          width: 100%;
+          transition: 0.55s;
+          position: absolute;
+          bottom: 10px;
+          transform: translateY(110%);
+          opacity: 0;
+        }
+      }
+      > div:hover {
+        > p {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
