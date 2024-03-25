@@ -65,4 +65,10 @@
     width: 100%;
     left: -17px;
   }
+  #btn {
+    right: 100px !important;
+  }
+  #box {
+    right: -150px !important;
+  }
 }
