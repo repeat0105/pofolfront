@@ -1,7 +1,7 @@
 .crudrevue {
   font-size: 24px;
   color: #fff;
-  width: 670px;
+  width: 100%;
   margin: 200px auto;
 }
 .crudrevue > div {
@@ -112,21 +112,21 @@ canvas {
 }
 @media screen and (max-width: 768px) {
   .crudrevue > div:nth-of-type(1) {
-    width: 500px;
+    width: 400px;
   }
   .crudrevue > div:nth-of-type(1) > form > div {
-    width: 470px;
+    width: 400px;
   }
   .crudrevue > div:nth-of-type(1) > button {
     margin: 0 auto 20px 10px;
   }
 }
-@media screen and (max-width: 486px) {
+@media screen and (max-width: 510px) {
   .crudrevue > div:nth-of-type(1) {
-    width: 400px;
+    width: 300px;
   }
   .crudrevue > div:nth-of-type(1) > form > div {
-    width: 370px;
+    width: 300px;
   }
   .crudrevue > div:nth-of-type(1) > button {
     margin: 0 auto 20px 15px;

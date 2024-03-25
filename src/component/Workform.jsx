@@ -88,7 +88,7 @@ function Workform({ url, worktitle }) {
   }
 
   return (
-    <article className="crudrevue">
+    <article className="crudrevue" style={url && {width: '687px', marginLeft: '50px' }}>
       <div>
         <h4>{worktitle === undefined ? "프로젝트 리뷰" : worktitle}</h4>
         <form onSubmit={save}>

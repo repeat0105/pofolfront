@@ -25,8 +25,7 @@ function About(props) {
           <img src={"/imgs/port_phone.png"} width="50px" height="50px" />
           <p>010-9104-2440</p>
         </div>
-      </div>
-      <div>
+      
         <div>
           <img src={"/imgs/adress.png"} width="50px" height="50px" />
           <p>
@@ -47,6 +46,7 @@ function About(props) {
         </div>
       </div>
       <img src={"/imgs/imageaa.png"} width="680px" height="480px" />
+    
     </div>
   );
 }

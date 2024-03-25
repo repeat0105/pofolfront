@@ -16,11 +16,13 @@
     line-height: 30px;
     word-break: keep-all;
   }
-  $aboutnum: (1, 2);
-  @each $anum in $aboutnum {
-    & > div:nth-of-type(#{$anum}) {
-      width: 50%;
+ 
+    > div:nth-of-type(1) {
+      width: 100%;
+      max-width: 530px;
       display: flex;
+      flex-wrap: wrap;
+      gap:10px;
       justify-content: space-around;
       padding-bottom: 30px;
       position: relative;
@@ -41,13 +43,14 @@
         }
       }
     }
-  }
+  
   > img:nth-of-type(1) {
     position: absolute;
     top: 1255px;
     left: 52%;
     width: 36%;
   }
+ 
 }
 
 @media screen and (max-width: 1620px) {
@@ -77,43 +80,5 @@
       left: -17px;
     }
   }
-  #btn {
-    right: 100px !important;
-  }
-  #box {
-    right:-150px !important;
-  }
-
 } 
 
-@media screen and (max-width: 486px) {
-  .aboutc {
-    > div:nth-of-type(1),
-    > div:nth-of-type(2) {
-      > div {
-        width: 100px;
-        height: 100px;
-      }
-    }
-    > div:nth-of-type(2) {
-      > div {
-        position: relative;
-        top: 0;
-        left: 0;
-        > p {
-          width: 100%;
-          transition: 0.55s;
-          position: absolute;
-          bottom: 10px;
-          transform: translateY(110%);
-          opacity: 0;
-        }
-      }
-      > div:hover {
-        > p {
-          opacity: 1;
-        }
-      }
-    }
-  }
-}

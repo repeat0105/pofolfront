@@ -44,10 +44,32 @@ function Skill(props) {
 
       <div className="swiperskill">
         <Swiper
-          slidesPerView={3}
+          
           spaceBetween={40}
           pagination={{
             clickable: true,
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            468: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 5,
+              spaceBetween: 30,
+            },
+            1130: {
+              slidesPerView: 6,
+              spaceBetween: 30,
+            },
+            1450: {
+              slidesPerView: 7,
+              spaceBetween: 40,
+            },
           }}
           modules={[Pagination]}
           className="mySwiper"

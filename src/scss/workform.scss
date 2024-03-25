@@ -2,7 +2,7 @@
   
   font-size: 24px;
   color: #fff;
-  width: 670px;
+  width: 100%;
   margin: 200px auto;
 
   > div {
@@ -133,10 +133,10 @@ canvas {
 @media screen and (max-width: 768px) {
   .crudrevue {
     > div:nth-of-type(1) {
-      width: 500px;
+      width: 400px;
       > form {
         > div {
-          width: 470px;
+          width: 400px;
         }
       }
       > button {
@@ -146,13 +146,13 @@ canvas {
   }
 }
 
-@media screen and (max-width: 486px) {
+@media screen and (max-width: 510px) {
   .crudrevue {
     > div:nth-of-type(1) {
-      width: 400px;
+      width: 300px;
       > form {
         > div {
-          width: 370px;
+          width: 300px;
         }
       }
       > button {

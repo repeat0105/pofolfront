@@ -187,3 +187,16 @@
     width: 400px;
   }
 }
+@media screen and (max-width: 510px) {
+  .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) {
+    width: 370px;
+  }
+  .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1), .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2) {
+    width: 40%;
+    height: 50px;
+    font-size: 16px;
+  }
+  .classwork .project-work > div:nth-of-type(2) > img {
+    width: 300px;
+  }
+}
