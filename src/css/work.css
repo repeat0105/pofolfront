@@ -42,6 +42,7 @@
   font-size: 20px;
   padding-bottom: 40px;
   line-height: 30px;
+  word-break: keep-all;
 }
 .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2) {
   font-size: 16px;
@@ -50,6 +51,7 @@
 .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(3) {
   font-size: 16px;
   padding-bottom: 40px;
+  word-break: keep-all;
 }
 .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
   display: flex;
@@ -198,5 +200,32 @@
   }
   .classwork .project-work > div:nth-of-type(2) > img {
     width: 300px;
+  }
+}
+@media screen and (max-width: 439px) {
+  .classwork .project-work > div:nth-of-type(1) {
+    margin-left: -45px;
+  }
+  .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) {
+    width: 100%;
+    padding: 25px;
+    height: 350px;
+  }
+  .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > h1 {
+    font-size: 30px;
+    padding-bottom: 3px;
+  }
+  .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) {
+    font-size: 12px;
+    padding-bottom: 10px;
+    line-height: 20px;
+  }
+  .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1), .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2) {
+    width: 30%;
+    height: 50px;
+    font-size: 12px;
+  }
+  .classwork .project-work > div:nth-of-type(2) {
+    margin-left: -20px;
   }
 }
