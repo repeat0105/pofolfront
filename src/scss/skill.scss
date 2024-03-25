@@ -48,8 +48,8 @@
       background-image: url("/imgs/milky-way.png");
       background-size: cover;
       background-color: rgba(255, 255, 255, 0.2);
-      width: 240px;
-      height: 270px;
+      width: 100%;
+      padding: 60px 10px;
 
       transition: all 0.3s;
       > p {
@@ -108,6 +108,7 @@
           display: flex;
           align-items: center;
           padding-left: 25px;
+          word-break: keep-all;
         }
       }
       > hr {
@@ -118,6 +119,29 @@
     }
   }
 }
+
+
+@media screen and (max-width: 1600px) {
+  .swiper-slide {
+    > div {
+      padding: 20px 10px !important;
+      >img {
+        width:70px; height: 70px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .swiper-slide {
+
+    > div {
+      width:149px !important; height: 161px !important;
+      
+    }
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   .skillcalss {

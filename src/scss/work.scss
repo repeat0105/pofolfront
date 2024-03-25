@@ -77,6 +77,7 @@
         }
         > div:nth-of-type(2) {
           font-size: 20px;
+
           .prolist1 {
             display: flex;
             margin-bottom: 15px;
@@ -107,6 +108,7 @@
 
         font-size: 20px;
         padding-top: 50px;
+        
 
         p {
           cursor: pointer;
@@ -166,13 +168,14 @@
       text-align: left;
       width: 60%;
       font-size: 20px;
-
+      margin-left: 20px ;
       > p:nth-of-type(2),
       p:nth-of-type(4),
       p:nth-of-type(6) {
         color: rgba(255, 255, 255, 0.7);
         padding-bottom: 80px;
         padding-top: 20px;
+        word-break: keep-all;
       }
       > img {
         border-radius: 20px;

@@ -149,6 +149,7 @@
   text-align: left;
   width: 60%;
   font-size: 20px;
+  margin-left: 20px;
 }
 .classwork .project-work > div:nth-of-type(2) > p:nth-of-type(2),
 .classwork .project-work > div:nth-of-type(2) p:nth-of-type(4),
@@ -156,6 +157,7 @@
   color: rgba(255, 255, 255, 0.7);
   padding-bottom: 80px;
   padding-top: 20px;
+  word-break: keep-all;
 }
 .classwork .project-work > div:nth-of-type(2) > img {
   border-radius: 20px;
