@@ -99,6 +99,10 @@ canvas {
   z-index: -99;
 }
 
+.small-screen {
+  margin-left: 50px;
+}
+
 @media screen and (max-width: 1024px) {
   .crudrevue > div:nth-of-type(1) {
     width: 570px;

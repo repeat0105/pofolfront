@@ -4,19 +4,19 @@ import "../scss/workform.scss";
 import { useStore } from "../zustandd/Store";
 import { Link } from "react-router-dom";
 import Usercom from "./Usercom";
+import { useLocation } from "react-router-dom";
 
 function Workform({ url, worktitle }) {
-
+  const location = useLocation();
   const { action, workform } = useStore();
-
+  const [nowurl, setnowurl] = useState(location.pathname)
+  
   const [title, setTitle] = useState("");
   const [inserttxt, setInserttxt] = useState("");
 
   useEffect(() => {
     action("get");
   }, []);
-
-
 
 
   const date = new Date();
@@ -88,7 +88,7 @@ function Workform({ url, worktitle }) {
   }
 
   return (
-    <article className="crudrevue" style={url && {width: '687px', marginLeft: '50px' }}>
+    <article className="crudrevue" style={url === undefined ? {width: '100%',  margin: '200px auto'} : {width:'687px'}}>
       <div>
         <h4>{worktitle === undefined ? "프로젝트 리뷰" : worktitle}</h4>
         <form onSubmit={save}>

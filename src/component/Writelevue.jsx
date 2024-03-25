@@ -6,13 +6,25 @@ import Fireworks from "../jsjs/Fireworks";
 function Writelevue(props) {
   const location = useLocation();
   const [revueurl, setRevueurl] = useState(null);
+  const [formwidth, setFormwidth] = useState(window.innerWidth);
 
   useEffect(() => {
     setRevueurl(location.pathname);
   }, [location]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setFormwidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
   return (
-    <div>
+    <div className={`resive ${formwidth <= 768 ? 'small-screen' : ''}`}>
       <Workform url={revueurl} />
       <Fireworks />
     </div>

@@ -38,7 +38,7 @@ function Work(props) {
   }, [windowWidth]);
 
   useEffect(() => {
-    if (locate.state.num === 0) {
+    if (locate.state.num === null ?  locate.state.num = 0 : locate.state.num === 0) {
       // 검색 + 상단스크롤
       topscroll(locate.state.num);
       // 메뉴바 상단스크롤
