@@ -1,61 +1,76 @@
+import React, { useState, useEffect, useRef } from "react";
+import "../scss/menubar.scss";
+import { Link } from "react-router-dom";
 
-import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-import '../scss/menubar.scss';
+const Menubar = () => {
 
-function Menubar(props) {
-    
-    const [isSidebarActive, setIsSidebarActive] = useState(false);
+  const lastScrollTop = useRef(0);
+  const [navClass, setNavClass] = useState("");
 
-    const handleButtonClick = () => {
-    
-        setIsSidebarActive(!isSidebarActive);
+  const hasScrolled = () => {
+    const st = window.pageYOffset;
+
+    if (st > lastScrollTop.current) {
+      setNavClass("nav-up");
+    } else {
+      setNavClass("");
+    }
+    lastScrollTop.current=st;
+  };
+  
+
+  useEffect(() => {
+    window.addEventListener("scroll", hasScrolled);
+
+    return () => {
+      window.removeEventListener("scroll", hasScrolled);
     };
+  }, []);
 
-    
-    const handlePageClick = () => {
-    
-        setIsSidebarActive(false);
-    };
 
-    
-    const handleKeyDown = (event) => {
+  const [isSidebarActive, setIsSidebarActive] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsSidebarActive(!isSidebarActive);
+  };
+
+  return (
+
+      <header className={`header ${navClass}`}>
         
-        if (event.keyCode === 27 && isSidebarActive) {
-        
-            setIsSidebarActive(false);
-        }
-    };
-
-    
-    useEffect(() => {
-        window.addEventListener('keydown', handleKeyDown);
-
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-        };
-    }, [isSidebarActive]); 
-
-    return (
-        <header>
-            <div id="page-wrapper" onClick={handlePageClick}>
-                <div id="title"><Link to="/">KKY PortFolio</Link></div>
-            </div>
-
-            <div id="btn" className={isSidebarActive ? 'active' : ''} onClick={handleButtonClick}>
-                <div id='top'></div>
-                <div id='middle'></div>
-                <div id='bottom'></div>
-            </div>
-            <div id="box" className={isSidebarActive ? 'active' : ''}>
-                <div id="items">
-                    <div className="item"><Link to="/" state={"0"}>HOME</Link></div>
-                    <div className="item"><Link to="/skill" state={"0"}>SKILL</Link></div>
-                    <div className="item"><Link to="/work" state={"0"}>WORK</Link></div>
-                </div>
-            </div>
-        </header>
-    );
-}
+        <div className="logo">
+          <h3><Link to="/">KKY PortFolio</Link></h3>
+        </div>
+        <div>
+          <ul className="nav" style={isSidebarActive ? {display:'block', display:'flex'} : {display:'none'}}>
+            <li className="nav__item">
+              <Link to="/" state={"0"}>
+                HOME
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link to="/skill" state={"0"}>
+                SKILL
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link to="/work" state={"0"}>
+                WORK
+              </Link>
+            </li>
+          </ul>
+          <div
+            id="btn9"
+            className={isSidebarActive ? "active9" : ""}
+            onClick={handleButtonClick}
+            >
+            <div id="top9"></div>
+            <div id="middle9"></div>
+            <div id="bottom9"></div>
+          </div>
+        </div>
+      </header>
+  );
+};
 
 export default Menubar;

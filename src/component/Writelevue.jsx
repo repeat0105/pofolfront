@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Workform from "./Workform";
 import { useLocation } from "react-router-dom";
 import Fireworks from "../jsjs/Fireworks";
+import Menubar from "./Menubar";
 
 function Writelevue(props) {
   const location = useLocation();
@@ -27,6 +28,7 @@ function Writelevue(props) {
     <div className={`resive ${formwidth <= 768 ? formwidth <= 510 ? 'bigsmall-screen': 'small-screen' : ''}`}>
       <Workform url={revueurl} />
       <Fireworks />
+      <Menubar />
     </div>
   );
 }
