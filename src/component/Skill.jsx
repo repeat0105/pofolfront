@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import bubblybutton from "../jsjs/bubblybutton";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import topscroll from "../jsjs/topscroll";
 
 function Skill(props) {
@@ -35,9 +35,11 @@ function Skill(props) {
   }, []);
 
   const loadMoreWorks = () => {
+    
     setVisibleWork((prev) => prev + 2);
   };
-
+ 
+  
   return (
     <div className="skillcalss">
       <h1>SKILL</h1>
@@ -109,9 +111,12 @@ function Skill(props) {
 
     
       <div>
-        <button className="bubbly-button" onClick={loadMoreWorks}>
-          더 보기
-        </button>
+        {
+          visibleWork < 11  
+          ? <button className="bubbly-button" onClick={loadMoreWorks}>더 보기</button> 
+          :<Link to="/work" state={"0"} className="morecls"> WORK </Link>  
+        }
+
       </div>
 
       <div id="stars"></div>

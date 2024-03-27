@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../scss/about.scss";
 
 function About(props) {
+  const [hovered, setHovered] = useState(false);
+
+
   return (
     <div className="aboutc">
       <h1 id="NavAbout">About</h1>
@@ -45,8 +48,13 @@ function About(props) {
           </p>
         </div>
       </div>
-      <img src={"/imgs/imageaa.png"} width="680px" height="480px" />
-    
+      <div onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+      {hovered ? (
+        <img src={"/imgs/resume.png"} width="680px" height="480px" className="aboutimg"/>
+      ) : (
+        <img src={"/imgs/imageaa.png"} width="680px" height="480px" />
+      )}
+    </div>
     </div>
   );
 }

@@ -64,6 +64,23 @@
   "workdata": [
     {
       "id": 0,
+      "bigimg": "/nextpro/healingline3.jpg",
+      "title": "HEALINGLINE",
+      "titletxt": "힐링이 필요한 모든 직장인들에게 주말에 시간을 내서 좋은 기억과 사진을 남겨서 평일을 버티게 해줄 수 있는 사이트 입니다. ",
+      "date": "2024. 2. 13 (1명)",
+      "language": "Next.js, fortawesome, Sass, Axios, Mongodb, Next-auth, Swiper, Zustand, PWA, React-wabcam, Firebase",
+      "img": "/nextpro/healingline2.png",
+      "titleone": "목표:",
+      "content": "주말에 앱으로 보낸 시간을 통해 힐링, 재충전된 상태를 만들고 활 시위 처럼 다시 당겨질 준비를 돕고, 사진을 통해 평일을 지내는 중 종종 연상되면서 지치지않도록하기, 초기에는 무료로 오픈 후 1만단위의 고객이 넘어가면 조금씩 이익의 방향을 찾는다.",
+      "titletwo": "후기",
+      "contenttwo": "그 동안 배운 내용을 기반으로 잡고 취업 전 할 수 있는 걸 다 해보고 이번 프로젝트에서는 오타, 이미배웠지만 생각이 안 나는 경우 등을 혼자 해결해 보면서 기존보다 코딩하는 시간이 더 걸려 보고 정말 모르는 내용 위주로 선생님께 물어 보았습니다. 이번 경험으로 혼자 해야 하는 이유를 알게 되었고 좀 더 많은 경험에 욕심이 생겼습니다.",
+      "titlethree": "와이어프레임",
+      "contentthree": "깃소셜로그인 후 메인페이지로 이동하고 마이페이지 혹은 각 지역구를 선택해 상세페이지로 이동 할 수 있습니다. 마이페이지에서는 홈으로 갈 수 있고 각 지역구를 선택해 상세페이지로 이동 할 수 있습니다.",
+      "site": "https://nextprolast.vercel.app/",
+      "github": "https://github.com/repeat0105/nextprolast.git"
+    },
+    {
+      "id": 1,
       "bigimg": "/imgs/imagework.png",
       "title": "클리안",
       "titletxt": " it관련 유료강의 후기, 간단한 it지식의 정보를 파악하고 사용자가 유용하다고 생각되면 관련 사이트로 이동하는 사이트입니다.",
@@ -78,23 +95,6 @@
       "contentthree": "이미지 ui를 클릭하면 해당 정보가 있는 페이지로 이동 정보가 마음에 들었다면 해당사이트로 이동하거나 다른 정보를 더 볼 수있습니다. 사이드에 있는 icon에 따라서 보여지는 이미지가 구분됩니다.",
       "site": "https://repeat0105.github.io/cliening_one/",
       "github": "https://github.com/repeat0105/cliening_one.git"
-    },
-    {
-      "id": 1,
-      "bigimg": "/nextpro/healingline3.jpg",
-      "title": "HEALINGLINE",
-      "titletxt": "힐링이 필요한 모든 직장인들에게 주말에 시간을 내서 좋은 기억과 사진을 남겨서 평일을 버티게 해줄 수 있는 사이트 입니다. ",
-      "date": "2024. 2. 13 (1명)",
-      "language": "Next,Sass,Axios,Mongodb,Next-auth,Swiper,Zustand,PWA,React-wabcam,Firebase",
-      "img": "/nextpro/healingline2.png",
-      "titleone": "목표:",
-      "content": "주말에 앱으로 보낸 시간을 통해 힐링, 재충전된 상태를 만들고 활 시위 처럼 다시 당겨질 준비를 돕고, 사진을 통해 평일을 지내는 중 종종 연상되면서 지치지않도록하기, 초기에는 무료로 오픈 후 1만단위의 고객이 넘어가면 조금씩 이익의 방향을 찾는다.",
-      "titletwo": "후기",
-      "contenttwo": "그 동안 배운 내용을 기반으로 잡고 취업 전 할 수 있는 걸 다 해보고 이번 프로젝트에서는 오타, 이미배웠지만 생각이 안 나는 경우 등을 혼자 해결해 보면서 기존보다 코딩하는 시간이 더 걸려 보고 정말 모르는 내용 위주로 선생님께 물어 보았습니다. 이번 경험으로 혼자 해야 하는 이유를 알게 되었고 좀 더 많은 경험에 욕심이 생겼습니다.",
-      "titlethree": "와이어프레임",
-      "contentthree": "깃소셜로그인 후 메인페이지로 이동하고 마이페이지 혹은 각 지역구를 선택해 상세페이지로 이동 할 수 있습니다. 마이페이지에서는 홈으로 갈 수 있고 각 지역구를 선택해 상세페이지로 이동 할 수 있습니다.",
-      "site": "https://nextprolast.vercel.app/",
-      "github": "https://github.com/repeat0105/nextprolast.git"
     }
   ]
 }
