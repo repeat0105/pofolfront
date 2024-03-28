@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Menubar from "./Menubar";
 import MouseOneHtml from "./MouseOneHtml";
 import "../scss/work.scss";
 import { Link, useLocation } from "react-router-dom";
 import topscroll from "../jsjs/topscroll";
-import { useStore } from "../zustandd/Store";
+
 import Workform from "./Workform";
 import workdata from "../datajson/data.json";
 
@@ -12,30 +12,21 @@ function Work(props) {
   const [scrollCount, setScrollCount] = useState(0);
   const [pagenum, setPagenum] = useState(0);
   const [prolists, setProlists] = useState(false);
+  const bigimgref = useRef(0)
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [imageSrc, setImageSrc] = useState("/nextpro/healingline3.jpg"); // 기본 이미지
 
   const locate = useLocation();
 
   //페이지
   const work = workdata.workdata[pagenum];
 
-
-
+  let a ;
   useEffect(() => {
-    function handleResize() {
-      setWindowWidth(window.innerWidth);
-    }
-    window.addEventListener("resize", handleResize);
-
-    if (pagenum === 1 && windowWidth <= 1024) {
-      setImageSrc("/nextpro/healingline1.png");
-    } else {
-      setImageSrc("/nextpro/healingline3.jpg");
-    }
-    return () => window.removeEventListener("resize", handleResize);
-  }, [windowWidth]);
+    a= bigimgref.current
+    if (pagenum === 1) {
+      a.style.backgroundImage = "url('/imgs/imagework.png')";
+    } 
+  },[prolists, pagenum])
 
   useEffect(() => {
     if (locate.state.num === null ?  locate.state.num = 0 : locate.state.num === 0) {
@@ -73,7 +64,7 @@ function Work(props) {
             }%) at center 700px)`,
           }}
         >
-          <img src={pagenum === 1 ? imageSrc : work.bigimg} />
+          <img ref={bigimgref} className="makbigimg" src={work.bigimg} alt=""/>
         </div>
       </div>
 
