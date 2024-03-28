@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/pofolfront/static/css/main.c8c3f3d8.css",
+    "main.css": "/pofolfront/static/css/main.6e5acbe5.css",
     "main.js": "/pofolfront/static/js/main.f788f53b.js",
     "static/js/453.421147b8.chunk.js": "/pofolfront/static/js/453.421147b8.chunk.js",
     "static/media/milky-way.png": "/pofolfront/static/media/milky-way.7e98fe2b0471fcc87c3b.png",
     "static/media/healingline1.png": "/pofolfront/static/media/healingline1.5bda4bafde58018315dd.png",
     "static/media/firstback.png": "/pofolfront/static/media/firstback.bc63a5cff91a720fac06.png",
     "index.html": "/pofolfront/index.html",
-    "main.c8c3f3d8.css.map": "/pofolfront/static/css/main.c8c3f3d8.css.map",
+    "main.6e5acbe5.css.map": "/pofolfront/static/css/main.6e5acbe5.css.map",
     "main.f788f53b.js.map": "/pofolfront/static/js/main.f788f53b.js.map",
     "453.421147b8.chunk.js.map": "/pofolfront/static/js/453.421147b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8c3f3d8.css",
+    "static/css/main.6e5acbe5.css",
     "static/js/main.f788f53b.js"
   ]
 }
