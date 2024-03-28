@@ -12,7 +12,7 @@ import Writelevue from './component/Writelevue';
 
 function App() {
   return (
-    <BrowserRouter >
+    <BrowserRouter basename='/pofolfront'>
       <Routes>
         <Route path='/'element={<Home />} />
         <Route path='/skill'element={<Skill />} />
