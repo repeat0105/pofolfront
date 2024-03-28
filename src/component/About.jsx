@@ -50,7 +50,7 @@ function About(props) {
       </div>
       <div onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       {hovered ? (
-        <img src={"/imgs/resume.png"} width="680px" height="480px" className="aboutimg"/>
+        <img src={"/imgs/aboutimg.jpg"} width="680px" height="480px" className="aboutimg"/>
       ) : (
         <img src={"/imgs/imageaa.png"} width="680px" height="480px" />
       )}

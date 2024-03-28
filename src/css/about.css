@@ -52,7 +52,8 @@
   transition: 0.5s all;
 }
 .aboutc .aboutimg {
-  filter: brightness(0.4);
+  border-radius: 20px;
+  filter: brightness(0.6);
 }
 
 @media screen and (max-width: 1620px) {

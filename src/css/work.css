@@ -180,6 +180,12 @@
     position: absolute;
     top: 600px;
   }
+  .makbigimg {
+    background-image: url("../../public/nextpro/healingline1.png");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+  }
 }
 @media screen and (max-width: 768px) {
   .classwork .project-work > div:nth-of-type(1) > div:nth-of-type(1) {
