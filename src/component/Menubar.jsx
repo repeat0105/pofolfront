@@ -42,7 +42,7 @@ const Menubar = () => {
           <h3><Link to="/">KKY PortFolio</Link></h3>
         </div>
         <div>
-          <ul className="nav" style={isSidebarActive ? {display:'block', display:'flex'} : {display:'none'}}>
+          <ul className="nav" style={isSidebarActive ? { display:'flex'} : {display:'none'}}>
             <li className="nav__item">
               <Link to="/" state={"0"}>
                 HOME

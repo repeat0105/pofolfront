@@ -25,7 +25,7 @@ function Skill(props) {
     bubblybutton();
 
     //상단스크롤
-    if (locate.state.num === 0) {
+    if (locate.state.num === null ?  locate.state.num = 0 : locate.state.num === 0) {
       topscroll(locate.state.num);
     } else if (locate.state === "0") {
       topscroll(locate.state);
@@ -80,7 +80,7 @@ function Skill(props) {
             return (
               <SwiperSlide key={Number(obj.id)}>
                 <div className="swiperskillmap">
-                  <img src={obj.img} width="100px" height="100px" />
+                  <img src={obj.img} width="100px" height="100px" alt=""/>
                   <p>{obj.title}</p>
                 </div>
               </SwiperSlide>
@@ -100,7 +100,7 @@ function Skill(props) {
           return (
             <div key={obj.id}>
               <div>
-                <img src={obj.img} width="100px" height="100px" />
+                <img src={obj.img} width="100px" height="100px" alt=""/>
                 <p>{obj.content}</p>
               </div>
               <hr />

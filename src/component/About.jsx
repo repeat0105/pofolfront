@@ -17,32 +17,32 @@ function About(props) {
       </p>
       <div>
         <div>
-          <img src={`/imgs/info.png`} width="50px" height="50px" />
+          <img src={`/imgs/info.png`} width="50px" height="50px" alt=""/>
           <p>강권영</p>
         </div>
         <div>
-          <img src={`/imgs/year_happy.png`} width="50px" height="50px" />
+          <img src={`/imgs/year_happy.png`} width="50px" height="50px" alt=""/>
           <p>1991 .1 .6</p>
         </div>
         <div>
-          <img src={"/imgs/port_phone.png"} width="50px" height="50px" />
+          <img src={"/imgs/port_phone.png"} width="50px" height="50px" alt=""/>
           <p>010-9104-2440</p>
         </div>
       
         <div>
-          <img src={"/imgs/adress.png"} width="50px" height="50px" />
+          <img src={"/imgs/adress.png"} width="50px" height="50px" alt=""/>
           <p>
             <span>인천광역시 남동구</span>
           </p>
         </div>
         <div>
-          <img src={"/imgs/emile.png"} width="50px" height="50px" />
+          <img src={"/imgs/emile.png"} width="50px" height="50px" alt=""/>
           <p>
             <span>breaker0105@nate.com</span>
           </p>
         </div>
         <div>
-          <img src={"/imgs/book.png"} width="50px" height="50px" />
+          <img src={"/imgs/book.png"} width="50px" height="50px" alt=""/>
           <p>
             <span>인하공업전문대학</span>
           </p>
@@ -50,9 +50,9 @@ function About(props) {
       </div>
       <div onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       {hovered ? (
-        <img src={"/imgs/aboutimg.jpg"} width="680px" height="480px" className="aboutimg"/>
+        <img src={"/imgs/aboutimg.jpg"} width="680px" height="480px" className="aboutimg" alt=""/>
       ) : (
-        <img src={"/imgs/imageaa.png"} width="680px" height="480px" />
+        <img src={"/imgs/imageaa.png"} width="680px" height="480px" alt=""/>
       )}
     </div>
     </div>
