@@ -4,7 +4,7 @@
 ### 새 프로젝트
 
 
-<img src="![image](https://github.com/repeat0105/pofolfront/assets/142207038/48a05eeb-c3ea-494b-9456-e1f73235987d)" width="500" height="auto">
+<img src="https://github.com/repeat0105/pofolfront/assets/142207038/48a05eeb-c3ea-494b-9456-e1f73235987d" width="500" height="auto">
 <img src="https://images.velog.io/images/ohwani/post/fbec6b50-1a23-44f6-8fbd-4014c441bd15/react_logo.png" alt="React.js Logo" width="430" height="auto">
 
 :힐링이 필요한 모든 직장인들에게 주말에 시간을 내서 좋은 기억과 사진을 남겨서 평일을 버티게 해줄 수 있는 사이트 입니다.
