@@ -64,6 +64,10 @@ function Work(props) {
             }%) at center 700px)`,
           }}
         >
+          <p>
+            <span>{work.title}</span><br/>
+            <span>{work.titletxt}</span>
+          </p>
           <img ref={bigimgref} className="makbigimg" src={work.bigimg} alt=""/>
         </div>
       </div>

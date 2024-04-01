@@ -12,6 +12,19 @@
     overflow: hidden;
     transition: clip-path 1s ease;
    
+    >div {
+      >p {
+        position: fixed;
+        color: rgba(99, 99, 99, 0.8);
+        text-shadow: 2px 2px 2px gray;
+        font-size: 30px;
+        width: 500px;
+        word-break: keep-all;
+        font-weight: bold;
+        top: 100px;
+        left: 100px;
+      }
+    }
   }
 
   .project-work {
