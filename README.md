@@ -7,7 +7,7 @@
 <img src="https://github.com/repeat0105/pofolfront/assets/142207038/48a05eeb-c3ea-494b-9456-e1f73235987d" width="500" height="auto">
 <img src="https://images.velog.io/images/ohwani/post/fbec6b50-1a23-44f6-8fbd-4014c441bd15/react_logo.png" alt="React.js Logo" width="430" height="auto">
 
-:힐링이 필요한 모든 직장인들에게 주말에 시간을 내서 좋은 기억과 사진을 남겨서 평일을 버티게 해줄 수 있는 사이트 입니다.
+:KKY PortFolio 포트폴리오 입니다.
 
 🔊 
 기획과 디자인 - React를 .
@@ -26,17 +26,17 @@
 -------------
 ✨🎺✨
 
--NEXT-AUTH를 활용해서 소셜로그인을 구현해봤고 서울축제API를 활용해서 데이터를 가공하고 실행시 마다 최신 데이터를 가져오도록 구현했습니다.
+- react-router-dom을 활용하여 페이지간 이동을 구현했습니다. 
 
--서울축제API 데이터에 북마크기능을 구현해서 MongoDB에 원하는 데이터를 저장하고 삭제해봤습니다. 
+- 메뉴바와 마우스포인터를 컴포넌트화 해서 skill과 workv페이지에 사용했습니다.
 
--서울축제API의 JSON데이터에 data.json의 추가로 데이터를 넣어서 디테일 페이지를 좀 더 구현해 봤습니다.
+- sass를 활용하여 각각의 html을 꾸며줬습니다. 
 
--날씨API를 활용해서 실행시마다 최신 데이터를 가져와서 구현 했습니다. 
+- 서버를 만들어서 axios로 요청하고 zustand로 전역적인 상태관리했습니다.
 
--카카오맵API를 활용해서 축제지역마다 위도와 경도를 받아서 동적으로 위치를 맵에 마킹하도록 구현했습니다. 
+- 리뷰폼 데이터를 몽고디비서버로 crud 했습니다.
 
--Suspense를 사용하지 않고 서울축제API의 가동 된 데이터가 없으면 Loding....을 데이터가 있으면 .length를 표시하도록 구현했습니다.
+- skill의 내용은 .json을 활용하여 jquery로 화면에 보여줬고 swiper를 사용하여 슬라이드를 구현했습니다.
 
 -------------
 ## 📢<a href="https://pofolfront-opal.vercel.app/"> 시연사이트 <a/> 
