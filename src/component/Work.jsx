@@ -64,7 +64,7 @@ function Work(props) {
             }%) at center 700px)`,
           }}
         >
-          <p>
+          <p style={pagenum === 0 ? {display:'block'}:{display:'none'} }>
             <span>{work.title}</span><br/>
             <span>{work.titletxt}</span>
           </p>
