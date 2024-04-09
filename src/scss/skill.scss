@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+@import url("../css/reset.css");
+
+.skillcalss {
+  color: #fff;
+  margin: 0 auto;
+  width: 75%;
+
+  background-image: url("/imgs/milky-way.png");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  width: 100%;
+  z-index: -100;
+
+  overflow: hidden;
+
+  h1 {
+    font-size: 60px;
+    text-align: center;
+    padding-top: 235px;
+    padding-bottom: 100px;
+  }
+
+  .swiper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+    position: relative;
+
+    margin: 0;
+    overflow: visible !important;
+  }
+
+  .swiper-slide {
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba(105, 105, 105, 0.3);
+      border-radius: 20px;
+      margin-left: 30px;
+
+      background-image: url("/imgs/milky-way.png");
+      background-size: cover;
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 100%;
+      padding: 60px 10px;
+
+      transition: all 0.3s;
+      > p {
+        font-size: 24px;
+        padding-top: 20px;
+        opacity: 0.7;
+      }
+    }
+  }
+  .swiper-slide:hover {
+    > div {
+      transform: scale(1.2) translateY(-10%);
+    }
+  }
+
+  .swiper-pagination-horizontal {
+    display: none;
+  }
+
+  //슬라이드 애니메이션
+  > div:nth-of-type(2) {
+    font-family: "Oswald", sans-serif;
+    font-size: 160px;
+
+    color: black;
+
+    text-shadow: 0 0 6px rgba(180, 180, 180, 1);
+    overflow: hidden;
+    > p {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-bottom: 120px;
+
+      animation: txt-2 20s linear infinite;
+    }
+
+    @keyframes txt-2 {
+      0% {
+        transform: translateX(-300%);
+      }
+
+      100% {
+        transform: translateX(0%);
+      }
+    }
+  }
+
+  //json데이터
+  > div:nth-of-type(3) {
+    margin: 0 auto;
+    width: 75%;
+    > div {
+      > div {
+        display: flex;
+        p {
+          display: flex;
+          align-items: center;
+          padding-left: 25px;
+          word-break: keep-all;
+        }
+      }
+      > hr {
+        padding: 0;
+        padding-top: 20px;
+        margin-bottom: 45px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1600px) {
+  .swiper-slide {
+    > div {
+      padding: 20px 10px !important;
+      >img {
+        width:70px; height: 70px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .swiper-slide {
+
+    > div {
+      width:100% !important; height: 161px !important;
+      
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .skillcalss {
+    .swiper {
+      width: 100%;
+    }
+    .swiper-slide {
+      > div {
+        width: 100%;
+        height: 200px;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      font-size: 100px;
+    }
+    > div:nth-of-type(3) {
+      > div {
+        > div {
+          > img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 486px) {
+  .skillcalss {
+    .swiper {
+      width: 100%;
+    }
+    .swiper-slide {
+      > div {
+        width: 100%;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      font-size: 80px;
+    }
+    > div:nth-of-type(3) {
+      > div {
+        > div {
+          > p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// n is number of stars required 배경스타 1,2,3
+@function multiple-box-shadow($n) {
+  $value: "#{random(2000)}px #{random(2000)}px #FFF";
+  @for $i from 2 through $n {
+    $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
+  }
+  @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(100);
+
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+  }
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+  animation: animStar 100s linear infinite;
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+  }
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: animStar 150s linear infinite;
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;
+  }
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-1500px);
+  }
+}
+
+$fuschia: #a3a3a3;
+$button-bg: $fuschia;
+$button-text-color: #fff;
+
+.bubbly-button {
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $button-bg;
+  color: $button-text-color;
+  border-radius: 4px;
+  border: none;
+
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+
+  left: 47%;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+
+  &:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, $button-bg 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, $button-bg 20%, transparent 30%),
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, $button-bg 15%, transparent 20%),
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+      radial-gradient(circle, $button-bg 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%,
+      15% 15%, 10% 10%, 18% 18%;
+    //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+
+  &:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, $button-bg 20%, transparent 20%),
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, $button-bg 15%, transparent 20%),
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+      radial-gradient(circle, $button-bg 20%, transparent 20%),
+      radial-gradient(circle, $button-bg 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%,
+      20% 20%;
+    //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+
+  &:active {
+    transform: scale(0.9);
+    background-color: darken($button-bg, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+
+  &.animate {
+    &:before {
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after {
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.morecls {
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $button-bg;
+  color: $button-text-color;
+  border-radius: 4px;
+  border: none;
+
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+
+  left: 47%;
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .bubbly-button {
+    margin-top: 50px;
+    padding: 15px 30px;
+  }
+  .morecls {
+    margin-top: 50px;
+    padding: 15px 30px;
+  }
+}
+
+@media screen and (max-width: 486px) {
+  .bubbly-button {
+    left: 38%;
+  }
+  .morecls {
+    left: 38%;
+  }
+  
+}
+
+
