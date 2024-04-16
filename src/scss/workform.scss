@@ -59,26 +59,28 @@
       padding: 10px;
       
       margin: 0 auto 20px 0;
+      
     }
 
     > form:nth-of-type(2) {
       > div {
         width: 670px;
         margin-bottom: 30px;
-        border-bottom: 1px solid;
+        border-bottom: 1px solid rgba(105, 105, 105, 0.7);
+        
         
         padding: 20px 10px;
-        opacity: 0.7;
+      
         > p:nth-of-type(1) {
           display: flex;
           
-          >span:nth-of-type(1) {
-            color:#fff;
-            opacity: 1;
+          >span:nth-of-type(2) {
+            opacity: 0.7;
           }
         }
         > p:nth-of-type(2) {
           margin-bottom: 20px;
+          opacity: 0.7;
         }
         > div {
           display: flex;
@@ -137,6 +139,7 @@ canvas {
 }
 
 .workmore {
+  
   cursor: pointer;
 }
 @media screen and (max-width: 1224px) {
