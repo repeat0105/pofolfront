@@ -173,7 +173,7 @@ function Work(props) {
           <p>{work.contentthree}</p>
           <p>후기:</p>
           <p>{work.contenttwo}</p>
-          <img src={work.img} width={560} alt="" />
+          <img src={work.img} width={560} height={300} alt="" />
           <Workform worktitle={work.title} />
         </div>
       </article>

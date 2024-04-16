@@ -80,7 +80,7 @@ function Skill(props) {
             return (
               <SwiperSlide key={Number(obj.id)}>
                 <div className="swiperskillmap">
-                  <img src={obj.img} width="100px" height="100px" />
+                  <img src={obj.img} width="100px" height="100px" alt=""/>
                   <p>{obj.title}</p>
                 </div>
               </SwiperSlide>
@@ -100,7 +100,7 @@ function Skill(props) {
           return (
             <div key={obj.id}>
               <div>
-                <img src={obj.img} width="100px" height="100px" />
+                <img src={obj.img} width="100px" height="100px" alt=""/>
                 <p>{obj.content}</p>
               </div>
               <hr />
@@ -112,7 +112,7 @@ function Skill(props) {
     
       <div>
         {
-          visibleWork < 19 
+          visibleWork < 20 
           ? <button className="bubbly-button" onClick={loadMoreWorks}>더 보기</button> 
           :<Link to="/work" state={"0"} className="morecls"> WORK </Link>  
         }

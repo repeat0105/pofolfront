@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useStore } from "../zustandd/Store";
 
 function Usercom({ obj, deleteform, ip }) {
-  const { action, workform } = useStore();
+  const { action } = useStore();
   const [edit, setEdit] = useState(null);
   const [updatecontenttxt, setUpdatecontenttxt] = useState("");
 
@@ -30,8 +30,8 @@ function Usercom({ obj, deleteform, ip }) {
   return (
     <div style={{ border: "1px sold #ffffff" }}>
       <p>
-        <span>- {obj.title} -</span>
-        <span>{obj.date}</span>
+        <span> {obj.title}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>/&nbsp;{obj.date}</span>
       </p>
       <p> {obj.content} </p>
       <div style={edit ? { display: "flex" } : { display: "none" }}>

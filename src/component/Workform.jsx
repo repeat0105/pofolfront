@@ -1,18 +1,20 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../scss/workform.scss";
 import { useStore } from "../zustandd/Store";
 import { Link } from "react-router-dom";
 import Usercom from "./Usercom";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 function Workform({ url, worktitle }) {
-  const location = useLocation();
+  // const location = useLocation();
   const { action, workform } = useStore();
-  const [nowurl, setnowurl] = useState(location.pathname)
+  // const [nowurl, setnowurl] = useState(location.pathname)
   
   const [title, setTitle] = useState("");
   const [inserttxt, setInserttxt] = useState("");
+
+  const [revue, setRevue] = useState(3);
 
   useEffect(() => {
     action("get");
@@ -68,9 +70,9 @@ function Workform({ url, worktitle }) {
   //삭제
   function deleteform(id) {
    
-    let a = workform.filter((obj) => {
-      return obj.id !== id;
-    });
+    // let a = workform.filter((obj) => {
+    //   return obj.id !== id;
+    // });
     action("delete", id);
   }
 
@@ -91,25 +93,33 @@ function Workform({ url, worktitle }) {
     setInserttxt(e.target.value);
   }
 
+  const loadMore = () => {
+    setRevue((prev) => prev + 2);
+  }
+
   return (
     <article className="crudrevue" style={url === undefined ? {width: '100%',  margin: '200px auto'} : {width:'687px'}}>
+      <p>리뷰:</p>
       <div>
-        <h4>{worktitle === undefined ? "프로젝트 리뷰" : worktitle}</h4>
+        {/* <h4>{worktitle === undefined ? "프로젝트 리뷰" : worktitle}</h4> */}
+        
         <form onSubmit={save}>
           <div>
             <input
               type="text"
               name="title"
+              placeholder="프로젝트 제목 입력해주세요"
               value={title}
               onChange={createform}
             />
             <input
               type="textcontent"
               name="content"
+              placeholder="프로젝트 리뷰를 입력해주세요"
               value={inserttxt}
               onChange={inserform}
             />
-            <input type="submit" name="save" value="저장" />
+            <input type="submit" name="save" id="rewidth" value="저장  &#12297;" />
           </div>
         </form>
 
@@ -123,7 +133,7 @@ function Workform({ url, worktitle }) {
                 to="/Work"
                 state={"0"}
               >
-                뒤로가기
+                &#12296; 뒤로가기
               </Link>
             </button>
             <form onSubmit={twofromsubmit}>
@@ -150,12 +160,13 @@ function Workform({ url, worktitle }) {
                 to="/Writelevue"
                 state={"0"}
               >
-                프로젝트 리뷰하기
+                프로젝트 리뷰하기 &#12297;
               </Link>
             </button>
             <form onSubmit={twofromsubmit}>
               {workform.length &&
-                workform.slice(0, 1).map((obj) => {
+                // workform.slice(0, 1).map((obj) => {
+                workform.slice(0, revue).map((obj) => {
                   return (
                     <Usercom
                       key={obj.id}
@@ -166,6 +177,9 @@ function Workform({ url, worktitle }) {
                   );
                 })}
             </form>
+            <div className="workmore">
+              <p onClick={loadMore}>MORE</p>
+            </div>
           </>
         )}
       </div>
