@@ -7,9 +7,16 @@ const request = axios.create({
 })
 
 export const useStore = create((set) => {
+    let queryParams;
     return {
         workform: [],
         action : async (type, info) => {
+            
+            
+                queryParams = { ip: info?.ip };
+
+            
+            // console.log(info)
             let d;
             switch(type) {
                 case 'get':
@@ -19,7 +26,9 @@ export const useStore = create((set) => {
                     d = await request.post('/', info); 
                     break;
                 case 'delete':
-                    d = await request.delete(`/${info}`);
+                    // d = await request.delete(`/${info.id}`);
+                    d = await request.delete(`/${info.id}`,{params:queryParams});
+                    // d = await request.delete(`/`,info);
                     break;
                 case 'put':
                     d = await request.put('/', info); 

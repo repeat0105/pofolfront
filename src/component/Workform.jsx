@@ -68,12 +68,13 @@ function Workform({ url, worktitle }) {
   };
 
   //삭제
-  function deleteform(id) {
-   
-    // let a = workform.filter((obj) => {
+  function deleteform(value) {
+    // let netdel = {id:value.id, ip:value.ip}
+  //  console.log(ip)
+    // let a = workform.filter((obj) => {  ip
     //   return obj.id !== id;
     // });
-    action("delete", id);
+    action("delete", value);
   }
 
 

@@ -62,7 +62,8 @@ function Usercom({ obj, deleteform, ip }) {
       </button>
       <button
         onClick={() => {
-          deleteform(obj.id);
+          deleteform({id:obj.id, ip:ip});
+          // deleteform(obj.id);
         }}
         style={edit ? { display: "none" } : { display: "inline-block" }}
       >
