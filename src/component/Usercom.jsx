@@ -17,7 +17,7 @@ function Usercom({ obj, deleteform, ip }) {
   // real수정
   function realupdata(clickip) {
     if (clickip === ip) {
-      console.log(123);
+
 
       action("put", { id: edit, content: updatecontenttxt });
       setUpdatecontenttxt("");
@@ -63,7 +63,7 @@ function Usercom({ obj, deleteform, ip }) {
       <button
         onClick={() => {
           deleteform({id:obj.id, ip:ip});
-          // deleteform(obj.id);
+     
         }}
         style={edit ? { display: "none" } : { display: "inline-block" }}
       >

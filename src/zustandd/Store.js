@@ -26,9 +26,12 @@ export const useStore = create((set) => {
                     d = await request.post('/', info); 
                     break;
                 case 'delete':
-                    // d = await request.delete(`/${info.id}`);
                     d = await request.delete(`/${info.id}`,{params:queryParams});
-                    // d = await request.delete(`/`,info);
+                   
+                    if (d.data.success === false) {
+                        alert(d.data.message);
+                        d = await request.get("/");
+                    }
                     break;
                 case 'put':
                     d = await request.put('/', info); 

@@ -4,12 +4,12 @@ import "../scss/workform.scss";
 import { useStore } from "../zustandd/Store";
 import { Link } from "react-router-dom";
 import Usercom from "./Usercom";
-// import { useLocation } from "react-router-dom";
+
 
 function Workform({ url, worktitle }) {
-  // const location = useLocation();
+  
   const { action, workform } = useStore();
-  // const [nowurl, setnowurl] = useState(location.pathname)
+  
   
   const [title, setTitle] = useState("");
   const [inserttxt, setInserttxt] = useState("");
@@ -69,11 +69,7 @@ function Workform({ url, worktitle }) {
 
   //삭제
   function deleteform(value) {
-    // let netdel = {id:value.id, ip:value.ip}
-  //  console.log(ip)
-    // let a = workform.filter((obj) => {  ip
-    //   return obj.id !== id;
-    // });
+  
     action("delete", value);
   }
 
