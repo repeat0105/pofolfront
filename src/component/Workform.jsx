@@ -4,17 +4,17 @@ import "../scss/workform.scss";
 import { useStore } from "../zustandd/Store";
 import { Link } from "react-router-dom";
 import Usercom from "./Usercom";
-// import { useLocation } from "react-router-dom";
 
-function Workform({ url, worktitle }) {
-  // const location = useLocation();
+
+function Workform({ url }) {
+ 
   const { action, workform } = useStore();
-  // const [nowurl, setnowurl] = useState(location.pathname)
+ 
   
   const [title, setTitle] = useState("");
   const [inserttxt, setInserttxt] = useState("");
 
-  const [revue, setRevue] = useState(3);
+ 
 
   useEffect(() => {
     action("get");
@@ -69,11 +69,7 @@ function Workform({ url, worktitle }) {
 
   //삭제
   function deleteform(value) {
-    // let netdel = {id:value.id, ip:value.ip}
-  //  console.log(ip)
-    // let a = workform.filter((obj) => {  ip
-    //   return obj.id !== id;
-    // });
+
     action("delete", value);
   }
 
@@ -94,15 +90,13 @@ function Workform({ url, worktitle }) {
     setInserttxt(e.target.value);
   }
 
-  const loadMore = () => {
-    setRevue((prev) => prev + 2);
-  }
+
 
   return (
     <article className="crudrevue" style={url === undefined ? {width: '100%',  margin: '200px auto'} : {width:'687px'}}>
-      <p>리뷰:</p>
+      
       <div>
-        {/* <h4>{worktitle === undefined ? "프로젝트 리뷰" : worktitle}</h4> */}
+       
         
         <form onSubmit={save}>
           <div>
@@ -153,21 +147,11 @@ function Workform({ url, worktitle }) {
           </>
         ) : (
           <>
-            <button>
-              <Link
-                style={{
-                  color: "#000",
-                }}
-                to="/Writelevue"
-                state={"0"}
-              >
-                프로젝트 리뷰하기 &#12297;
-              </Link>
-            </button>
+          
             <form onSubmit={twofromsubmit}>
               {workform.length &&
-                // workform.slice(0, 1).map((obj) => {
-                workform.slice(0, revue).map((obj) => {
+                
+                workform.slice(0, 3).map((obj) => {
                   return (
                     <Usercom
                       key={obj.id}
@@ -179,7 +163,19 @@ function Workform({ url, worktitle }) {
                 })}
             </form>
             <div className="workmore">
-              <p onClick={loadMore}>MORE</p>
+            <button>
+              <Link
+                style={{
+                  color: "#000",
+                }}
+                to="/Writelevue"
+                state={"0"}
+              >
+                프로젝트 리뷰하기 &#12297;
+              </Link>
+            </button>
+     
+
             </div>
           </>
         )}

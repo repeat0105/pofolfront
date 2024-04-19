@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.4c37cdf8.css",
-    "main.js": "/static/js/main.80e1e1ea.js",
+    "main.css": "/static/css/main.8c22ef37.css",
+    "main.js": "/static/js/main.ad7ddcf5.js",
     "static/js/453.421147b8.chunk.js": "/static/js/453.421147b8.chunk.js",
     "static/media/milky-way.png": "/static/media/milky-way.7e98fe2b0471fcc87c3b.png",
     "static/media/healingline1.png": "/static/media/healingline1.5bda4bafde58018315dd.png",
     "static/media/firstback.png": "/static/media/firstback.bc63a5cff91a720fac06.png",
     "index.html": "/index.html",
-    "main.4c37cdf8.css.map": "/static/css/main.4c37cdf8.css.map",
-    "main.80e1e1ea.js.map": "/static/js/main.80e1e1ea.js.map",
+    "main.8c22ef37.css.map": "/static/css/main.8c22ef37.css.map",
+    "main.ad7ddcf5.js.map": "/static/js/main.ad7ddcf5.js.map",
     "453.421147b8.chunk.js.map": "/static/js/453.421147b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c37cdf8.css",
-    "static/js/main.80e1e1ea.js"
+    "static/css/main.8c22ef37.css",
+    "static/js/main.ad7ddcf5.js"
   ]
 }

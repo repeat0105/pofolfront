@@ -13,7 +13,6 @@ export const useStore = create((set) => {
     action: async (type, info) => {
       queryParams = { ip: info?.ip };
 
-      // console.log(info)
       let d;
       switch (type) {
         case "get":
@@ -23,10 +22,9 @@ export const useStore = create((set) => {
           d = await request.post("/", info);
           break;
         case "delete":
-          // d = await request.delete(`/${info.id}`);
+       
           d = await request.delete(`/${info.id}`, { params: queryParams });
-          // d = await request.delete(`/`,info);
-          //   console.log(1212, d, d.data);
+     
           if (d.data.success === false) {
             alert(d.data.message);
             d = await request.get("/");
@@ -36,6 +34,8 @@ export const useStore = create((set) => {
           d = await request.put("/", info);
           break;
       }
+
+  
 
       set({ workform: d.data });
     },

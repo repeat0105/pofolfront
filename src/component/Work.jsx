@@ -9,7 +9,7 @@ import Workform from "./Workform";
 import workdata from "../datajson/data.json";
 
 function Work(props) {
-  // const [scrollCount, setScrollCount] = useState(0);
+
   const [pagenum, setPagenum] = useState(0);
   const [prolists, setProlists] = useState(false);
   const bigimgref = useRef(0)
@@ -20,13 +20,7 @@ function Work(props) {
   //페이지
   const work = workdata.workdata[pagenum];
 
-  // let a ;
-  // useEffect(() => {
-  //   a= bigimgref.current
-  //   if (pagenum === 1) {
-  //     a.style.backgroundImage = "url('/imgs/imagework.png')";
-  //   } 
-  // },[prolists, pagenum])
+
 
   useEffect(() => {
     if (locate.state.num === null ?  locate.state.num = 0 : locate.state.num === 0) {
@@ -37,16 +31,6 @@ function Work(props) {
       topscroll(locate.state);
     }
 
-    // //마스킹
-    // const handleScroll = () => {
-    //   setScrollCount(window.scrollY);
-    // };
-
-    // window.addEventListener("scroll", handleScroll);
-
-    // return () => {
-    //   window.removeEventListener("scroll", handleScroll);
-    // };
   }, []);
 
  
@@ -169,7 +153,7 @@ function Work(props) {
           <p>후기:</p>
           <p>{work.contenttwo}</p>
           <img src={work.img} width={560} height={300} alt="" />
-          <Workform worktitle={work.title} />
+          <Workform  />
         </div>
       </article>
 

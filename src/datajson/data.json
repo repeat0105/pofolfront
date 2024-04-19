@@ -64,13 +64,13 @@
       "id": 10,
       "img": "/imgs/mongodb.png",
       "title": "MONGODB",
-      "content": "react, next14의 프론트에서 HTTP요청하면 node.js와 mongoDB를 연동하여 북마크기능,  CRUD 를 구현해봤습니다."
+      "content": "react, next14의 프론트에서 HTTP요청하면 node.js와 mongoDB를 연동하여 북마크기능, CRUD 를 구현해봤습니다."
     },
     {
       "id": 11,
       "img": "/imgs/cloudtype.png",
       "title": "CLOUDTYPE",
-      "content": "서버의 지속적인 실행환경을 갖추기위해 node, mariadb를 배포해 봤습니다."
+      "content": "서버의 지속적인 실행시키기 위해 node, mariadb를 배포해서 현재 프로젝트에 사용 중 입니다."
     },
     {
       "id": 12,
@@ -88,7 +88,7 @@
       "id": 14,
       "img": "/imgs/next-auth.png",
       "title": "NEXT-AUTH",
-      "content": "GIT 소셜로그인을 해보았고 로그인 상태일 때와 아닐때의 상태관리를 구현해 봤습니다."
+      "content": "GIT 소셜로그인을 해보았고 sesstion의 상태로 로그인 상태일 때와 아닐때의 상태관리를 구현해 봤습니다."
     },
     {
       "id": 15,
@@ -106,7 +106,7 @@
       "id": 17,
       "img": "/imgs/vue3.png",
       "title": "VUE3",
-      "content": "웹 게임을 클론코딩하여 여러 게임을 구현해보았고 data를 통해 변경되는 변수를 활용하여 화면을 랜더링하고 vue-router로 페이지네이션하고, vuex를 활용한 store로 틱택톡,지뢰게임,댓글,대댓글을 모듈화하여 사용했습니다."
+      "content": "data를 통해 변경되는 변수를 활용하여 화면을 랜더링하고 vue-router, vuex를 활용한 store를 모듈화하여 틱택톡,지뢰게임,댓글,대댓글의 사용했습니다."
     },
     {
       "id": 18,

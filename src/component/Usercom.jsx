@@ -8,27 +8,19 @@ function Usercom({ obj, deleteform, ip }) {
 
   //수정
   function updatafrom(id, content) {
-    // console.log(id, content);
-
     setEdit(id);
     setUpdatecontenttxt(content);
   }
 
-  // real수정
-  // 어떻게 유효성 검사가 되었지 처음 저장시 Ip를 몽고디비에 저장하고 가져와서 사용
-  // 2번째 수정할때는 저장을 거쳐야 수정이 가능하니까
-  // 결론
-  // 처음 브라우저키면 useEffect로 ip 따옴 그래서
-  // 처음 저장된 ip와 현재 접속한 사람의 Ip를 비교가 가능해짐
   function realupdata(clickip) {
     if (clickip === ip) {
-      // console.log(clickip);
+   
 
       action("put", { id: edit, content: updatecontenttxt });
       setUpdatecontenttxt("");
       setEdit(null);
     } else {
-      // console.log(clickip, ip);
+    
       alert("다른사람의 댓글입니다.");
     }
   }
@@ -69,7 +61,7 @@ function Usercom({ obj, deleteform, ip }) {
       <button
         onClick={() => {
           deleteform({ id: obj.id, ip: ip });
-          // deleteform(obj.id);
+     
         }}
         style={edit ? { display: "none" } : { display: "inline-block" }}
       >
