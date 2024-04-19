@@ -25,7 +25,7 @@ function Writelevue(props) {
 
 
   return (
-    <div className={`resive ${formwidth <= 768 ? formwidth <= 510 ? 'bigsmall-screen': 'small-screen' : ''}`}>
+    <div className={`resive ${formwidth <= 768 ? formwidth <= 510 ? 'bigsmall-screen': 'small-screen' : ''}`} style={{marginTop:'120px'}}>
       <Workform url={revueurl} />
       <Fireworks />
       <Menubar />
