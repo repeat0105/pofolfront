@@ -153,8 +153,8 @@
     {
       "id": 2,
       "bigimg": "/imgs/vuegame3.png",
-      "title": "웹게임모음",
-      "titletxt": "web게임의 코드를 파악하고 직접 구현해보는 연습을 했습니다.",
+      "title": "웹게임보드",
+      "titletxt": "vue3로 web게임의 코드를 클론코딩하고 서버와 mysql과 연동하여 대댓글의 CRUD를 통해 구현했습니다.",
       "date": "2023. 4. 1 (1명)",
       "language": "vue3,vue-router,vuex, mysql, github, vercel, cloudtype, figma, axios",
       "img": "/imgs/vuegame1.png",
