@@ -17,7 +17,7 @@ function Workform({ url, worktitle }) {
   const [revue, setRevue] = useState(3);
 
   useEffect(() => {
-    // action("get");
+    action("get");
   }, []);
 
 
@@ -34,14 +34,14 @@ function Workform({ url, worktitle }) {
   //ip   
   const [ip, setIp] = useState();
   useEffect(() => {
-    // try {
-    //   axios.get(process.env.REACT_APP_IPURL).then((res) => {
-    //     setIp(res.data);
-    //   });
+    try {
+      axios.get(process.env.REACT_APP_IPURL).then((res) => {
+        setIp(res.data);
+      });
 
-    // }catch (err) {
-    //   console.log('서버 대기 중 입니다.', '에러 :', err )
-    // }
+    }catch (err) {
+      console.log('서버 대기 중 입니다.', '에러 :', err )
+    }
   }, []);
 
 

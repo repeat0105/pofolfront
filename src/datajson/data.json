@@ -10,13 +10,13 @@
       "id": 1,
       "img": "/imgs/cssthree.png",
       "title": "CSS3",
-      "content": "display: flex, block, none를 사용할 수 있습니다. position:relative,absolute,fiexd와 transform을 사용 할 수 있습니다."
+      "content": "display: flex, block, none를 사용할 수 있습니다. position: relative, absolute, fiexd와 transform을 사용 할 수 있습니다."
     },
     {
       "id": 2,
       "img": "/imgs/javascriptt.png",
       "title": "JAVASCRIPT",
-      "content": "돔제어를 통해 style,classList를 추가하거나 삭제 할 수 있습니다. localStorage를 통해 데이터를 넘길수 있습니다. matchMedia를 통해 js로 반응형을 할 수 있습니다."
+      "content": "돔제어를 통해 style, classList를 추가하거나 삭제 할 수 있습니다. localStorage를 통해 데이이터를 저장하고 사용 할 수 있습니다. matchMedia를 통해 js로 반응형을 할 수 있습니다."
     },
     {
       "id": 3,
@@ -34,19 +34,19 @@
       "id": 5,
       "img": "/imgs/figmaaaaa.png",
       "title": "FIGMA",
-      "content": "화면을 구상하고 샘플 화면을 그릴 수 있습니다."
+      "content": "기획하고 밴치마킹해서 화면의 샘플을 그릴 수 있습니다."
     },
     {
       "id": 6,
       "img": "/imgs/github.png",
       "title": "GITHUB",
-      "content": "나의 프로젝트를 깃에 배포 할 수 있고 빌드와 디플로이를 통해 배포 할 수 있습니다."
+      "content": "프로젝트를 github로 배포 할 수 있고 vercel과 연동 할 수 있습니다."
     },
     {
       "id": 7,
       "img": "/logo192.png",
       "title": "REACT",
-      "content": "- useState를 통해 화면을 랜더링 할 수 있습니다. useEffect를 통해 한번만 화면이 랜더링 되게 할 수 있습니다. react-router-dom을 통해 페이지 전환을 할 수 있고 id를 넘겨 받을 수 있습니다. zustand, redux로 상태관리 할 수 있습니다."
+      "content": "- useState, useEffect를 화면을 랜더링 할 수 있습니다.- react-router-dom을 통해 페이지 전환을 할 수 있고 state를 zustand, redux로 전역적으로 상태관리 할 수 있습니다."
     },
     {
       "id": 8,
@@ -64,7 +64,7 @@
       "id": 10,
       "img": "/imgs/mongodb.png",
       "title": "MONGODB",
-      "content": "react, next14의 프론트에서 HTTP요청하면 node.js와 mongoDB를 연동하여 리뷰, 북마크기능 crud 할 때 구현해봤습니다."
+      "content": "react, next14의 프론트에서 HTTP요청하면 node.js와 mongoDB를 연동하여 북마크기능,  CRUD 를 구현해봤습니다."
     },
     {
       "id": 11,
@@ -76,13 +76,13 @@
       "id": 12,
       "img": "/imgs/next.png",
       "title": "NEXT14",
-      "content": "APPROUTER를 활용하여 페이지 이동 할 수 있고 vercel에 호스팅시 날씨와 서울 축제 OpenAPI의 cors에러가 있었습니다. NEXT14는 프론트에서 요청하면 서버에서 응답 할 때 HTTP에러를 자체적으로 잡아서 데이터를 프론트엔드에 보낸다는 것을 알게 되었습니다."
+      "content": "APP-ROUTER를 활용하여 페이지 이동 할 수 있고 프론트와 서버간의 데이터를 요청과 응답으로 주고 받고 state를 활용해서 렌더링 할 수 있고 zustand로 state를 전역적으로 사용할 수 있습니다."
     },
     {
       "id": 13,
       "img": "/imgs/vercel.png",
       "title": "VERCEL",
-      "content": "react, next14, vue 프로젝트를 배포해서 사용하고 있고 틈틈히 변경사항을 추가하고 있습니다."
+      "content": "VUE3, NEXT14, REACT로 프로젝트를 만들어 VERCEL로 배포하고 있고 틈틈히 변경사항을 추가하고 있습니다."
     },
     {
       "id": 14,
